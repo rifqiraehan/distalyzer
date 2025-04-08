@@ -9,7 +9,7 @@ st.set_page_config(
     layout="centered"
 )
 
-st.title("Analisis Distribusi Data")
+st.title("Distalyzer - Aplikasi Analisis Distribusi Data")
 
 st.markdown("""
 Aplikasi ini membantu kamu menganalisis distribusi data frekuensi, PDF, CDF, dan persentase dari file **CSV** atau **JSON**.
