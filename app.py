@@ -75,7 +75,7 @@ if uploaded_file is not None:
 
                 df["Persentase"] = df["PDF_numeric"] * 100
 
-                st.subheader("Tabel Data Distribusi Frekuensi, PDF, CDF, dan Persentase")
+                st.subheader("Distribusi Frekuensi, PDF, CDF, dan Persentase")
                 st.dataframe(df.rename(columns={col1: col1, col2: "Frekuensi"}).set_index(col1)[["Frekuensi", "PDF", "CDF", "Persentase"]])
 
                 st.subheader("Grafik Frekuensi")
