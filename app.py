@@ -66,12 +66,15 @@ if input_method == "Upload file":
             df = None
 elif input_method == "Input teks":
     text_input = st.text_area("Masukkan data Anda di sini", height=200)
-    if text_input:
+    submitted = st.button("Submit Data")
+    if submitted and text_input:
         try:
             df = pd.read_csv(StringIO(text_input))
         except Exception as e:
             st.error(f"Terjadi kesalahan saat memproses input: {e}")
             df = None
+    elif submitted and not text_input:
+        st.warning("Silakan masukkan data sebelum menekan submit.")
 
 # Proses data jika ada
 if df is not None:
